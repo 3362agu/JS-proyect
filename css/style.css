@@ -62,7 +62,7 @@ body{
 .contenedor .unica {
   grid-area: sect1;
   width: 100%;
-  height: 700px;
+  height: 800px;
   padding: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -71,16 +71,16 @@ body{
 .contenedor .icon {
   grid-area: sect4;
   width: 100%;
-  height: 1000px;
+  height: 700px;
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 100px;
   margin-bottom: 5px;
 }
 
 .contenedor .redes {
   grid-area: sect5;
   width: 100%;
-  height: 100px;
+  height: 200px;
   padding: 5px;
 
   margin-top: 10px;
@@ -114,8 +114,8 @@ body{
 
 .carrito{
   position: absolute;
-  left: 330px;
-  margin: 10px;
+  left: 309px;
+  margin: 20px;
   border-radius: 15px;
 }
 
@@ -123,21 +123,22 @@ body{
 
 /*----------------------------Seccion header principal---------------------------*/
 
-header{
-  background-image: url(../assest/logo-header.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+header img{
+  width: 100%;
+  height: 500px;
 }
 
 .descripcion h1 {
   color: white;
   font-family: 'Domine', serif;
+  text-shadow: 4px 4px black;
 }
 
 .descripcion p {
   display: flex;
   color: white;
   font-family: 'Cinzel', serif;
+  text-shadow: 4px 4px black;
 }
 
 .tituloPremium {
@@ -207,6 +208,7 @@ header{
   height: 185px;
 }
 
+
 /*-----------Seccion moderna pagina principal------------*/
 
 .tituloModerna{
@@ -228,19 +230,19 @@ header{
 
 .contenedorCarousel{
   width: 100%;
-  height: 470px;
+  height: 450px;
 
   padding: 10px;
 }
 
 .img__carousel{
   width: 100px;
-  height: 470px;
+  height: 450px;
 
 }
 
 .button__moderna{
-  margin-top: 5px;
+  margin-top: 20px;
 }
 
 /*---------Seccion ropa clasica pagina principal-------------*/
@@ -255,6 +257,7 @@ header{
   height: 300px;
   
 }
+
 
 .cont__clasica--text h2{
   font-family: sans-serif;
@@ -279,16 +282,32 @@ header{
   justify-content: end;
 }
 
+.grupoCartas{
+  display: none;
+}
+
 
 
 /*---------------Seccion iconos-------------*/
 
 .cuotas img{
-  width: 100%;
-  height: 380px;
+  width: 80px;
+  height: 80px;
 }
 
-.cuotas p{
+.metodosPagos{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  border: solid black 3px;
+  border-radius: 30px;
+  box-shadow: 3px 3px 3px 3px black;
+}
+
+.cuotas h3{
   font-size: 40px;
   font-weight: 500;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -300,14 +319,24 @@ header{
   color: white;
   
   text-align: center;
+  margin-top: 30px;
+}
+
+.metodoEnvios{
+  margin-bottom: 60px;
+  margin-top: 40px;
+  border: solid black 3px;
+  border-radius: 30px;
+  box-shadow: 3px 3px 3px 3px black;
 }
 
 .envios img{
   width: 100%;
-  height: 380px;
+  height: 200px;
+  border-radius: 30px;
 }
 
-.envios p{
+.envios h3{
   font-size: 40px;
   font-weight: 500;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -324,8 +353,20 @@ header{
 
 .redes{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: auto;
+}
+
+.contRedes{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 2px rgb(46, 130, 255);
+  border-radius: 20px;
+  width: 100%;
+  height: 150px;
 }
 
 .cont__insta{
@@ -386,6 +427,7 @@ header{
   height: 60px;
 }
 
+
 /*------------Seccion footer------------*/
 
 footer{
@@ -441,12 +483,55 @@ footer div a{
   height: 80%;
 }
 
-/*--------------- -------------------  SECCION EDICION LIMITADA -------------------------------------------*/
+/*------------  SECCION EDICION LIMITADA ----------*/
 
 
 .contenedor__cuentaRegresiva{
-  background-color: white;
+  background-image: url(../assest/fondo-conteo-regresivo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
 }
+
+.contenedor__cuentaRegresiva h2{
+  font-size: 35px;
+  margin-top: -40px;
+  color: black;
+  text-shadow: 0 0 10px rgb(46, 130, 255);
+}
+
+.big-text{
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0 1.5rem;
+}
+
+.contEle{
+  background-color: white;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 1px;
+  text-align: center;
+}
+
+.contEle span{
+  font-size: 1.5rem;
+}
+
+
+.cont--text{
+  display: flex;
+}
+
+/*------------------SECCION DE ESTILOS PRODUCTOS--------------------*/
 
 .contenedor__edicionlimitada1{
   padding: 10px;
@@ -488,124 +573,52 @@ footer div a{
   font-size: 20px;
 }
 
-/*Remera 2*/
-
-.remeraEL2{
-  background-color: white;
-  border-radius:20px;
-  border: solid rgb(46,130, 255);
-  display: flex;
-  flex-flow: wrap;
-  margin-top: 20px;
-}
-
-.remeraEL2 img{
-  border-radius: 20px;
-  display: flex;
-  width: 190px;
-  
-
-}
-
-.remeraEL2__texto{
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-flow: column;
-  width: 250px;
-
-  padding: 15px;
-
-  margin-left: 130px;
-  margin-top: -160px;
-  height: 140px;
-}
-
-.remeraEL2__texto h3{
-  font-size: 20px;
-}
-
 .btnAgregar{
   color: white;
   background-color: rgb(46, 130, 255);
 }
 
-/*pantalon1*/
-
-.contenedor__edicionlimitada2{
-  padding: 10px;
+.imgRopa2{
+  display: none;
 }
 
-.pantalonEL1{
-  background-color: white;
-  border-radius:10px;
-  border: solid rgb(46,130, 255);
-  display: flex;
-  flex-flow: wrap;
-  margin-top: 10px;
-  margin-bottom: 20px;
+
+.imgZoom{
+  position: absolute;
+  height: 500px;
+  width: 500px;
 }
 
-.pantalonEL1 img{
-  border-radius: 20px;
-  display: flex;
-  width: 190px;
-  height: 190px;
+/*-----------------------------        responsive            --------------------*/
 
-}
-
-.pantalonEL1__texto{
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-flow: column;
-  width: 250px;
-
-  padding: 15px;
-
-  margin-left: 130px;
-  margin-top: -160px;
-  height: 140px;
-}
-
-/*pantalon2*/
-
-.pantalonEL2{
-  background-color: white;
-  border-radius:20px;
-  border: solid rgb(46,130, 255);
-  display: flex;
-  flex-flow: wrap;
-  margin-top: 20px;
-}
-
-.pantalonEL2 img{
-  border-radius: 20px;
-  display: flex;
-  width: 190px;
+@media (min-width: 780px){
   
+  body{
+    background-color: white;
+  }
 
-}
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.pantalonEL2__texto{
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-flow: column;
-  width: 250px;
-
-  padding: 15px;
-
-  margin-left: 130px;
-  margin-top: -160px;
-  height: 140px;
-}
+  .menu ul li{
+    font-size: 40px;
+    margin-left: 50px;
+  }
 
 
-@media (min-width: 769px) {
+  .tamañoMenu {
+    font-size: 40px;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logoMenu{
+    font-size: 100px;
+  }
+
   .contenedor {
     width: 100%;
     display: grid;
@@ -621,76 +634,533 @@ footer div a{
    "footer footer footer footer ";
   }
 
-  .contenedor .menu {
-    grid-area: menu;
-    width: 100%;
-    height: 100px;
-    
-  }
+  /*HEADER*/
   
   .contenedor header {
     grid-area: header;
     width: 100%;
-    height: 800px;
+    height: 850px;
     padding: 5px;
-  }
   
-  .contenedor .clasica {
-    grid-area: sect3;
+  }
+
+  header img{
     width: 100%;
-    height: 800px;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    height: 850px;
+  }
+
+  .descripcion h1 {
+    color: white;
+    font-family: 'Domine', serif;
   }
   
-  .contenedor .moderna {
-    grid-area: sect2;
-    width: 100%;
-    height: 800px;
-    padding: 5px;
-  
-    margin-top: 5px;
-    margin-bottom: 5px;
+  .descripcion p {
+    display: flex;
+    color: white;
+    font-family: 'Cinzel', serif;
   }
+  
+  .tituloPremium {
+    font-size: 200px;
+    font-style: oblique;
+  }
+  
+  .textoPremium {
+    font-size: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 50px;
+  }
+
+  /*------------------------Carrito flotante------------------------------*/
+
+  .carrito{
+    position: absolute;
+    left: 90%;
+    margin: 20px;
+    border-radius: 15px;
+  }
+
+  .carrito button{
+    position: fixed;
+    width: 110px;
+    height: 110px;
+  }
+
+  .carrito img{
+    width: 75px;
+    height: 75px;
+  }
+
+  /*----- unica index*/
   
   .contenedor .unica {
     grid-area: sect1;
     width: 100%;
-    height: 800px;
+    height: 1300px;
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
   }
+
+  /*------------------------Seccion edicion limiada pagina principal------------------------*/
+
+.unica__img{
+  background-image: url(../assest/edicion-limitada-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1300px;
+}
+
+.unica__titulo{
+  color: white;
+  font-size: 120px;
+  font-weight: 800;
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  text-shadow: 10px 10px rgb(0, 0, 0);
+
+  border-bottom: solid 15px rgb(77, 205, 255);
   
+}
+
+.unica__texto{
+  color: white;
+  font-size: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-shadow: 10px 10px rgb(0, 0, 0);
+  
+  text-align: end;
+  padding-left: 100px;
+  padding-right: 20px;
+  font-weight: 500;
+
+  margin-top: 200px;
+  margin-left: 300px;
+  
+}
+
+.unica__carousel{
+  display: block;
+  height: 400px;
+  width: 500px;
+  border: solid 15px rgb(46, 130, 255);
+  border-radius: 15px;
+}
+
+.unica__carousel img{
+  border-radius: 10px;
+  height: 370px;
+  width: 500px;
+  border-radius: 1px;
+}
+  
+/*-----condenedor moderna index*/
+
+  .contenedor .moderna {
+    grid-area: sect2;
+    width: 100%;
+    height: 1200px;
+    padding: 5px;
+  
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /*-----------Seccion moderna pagina principal------------*/
+
+
+.tituloModerna{
+  height: 150px;
+  background-color: black;
+}
+
+.tituloModerna h2{
+  color: white;
+  font-size: 100px;
+}
+
+.contenedorCarousel{
+  border-radius: 20px;
+  height: 950px
+  
+}
+
+.img__carousel{
+  height: 950px;
+  border-radius: 20px;
+
+}
+
+.button__moderna{
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+/*----contenedor clasica index*/
+
+  .contenedor .clasica {
+    grid-area: sect3;
+    width: 100%;
+    height: 1200px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /*---------Seccion ropa clasica pagina principal-------------*/
+
+
+
+.clasica img{
+  
+  width: 100%;
+  height: 1200px;
+  
+}
+
+.cont__clasica--text h2{
+  font-family: sans-serif;
+  font-weight: 600;
+  text-shadow: 10px 10px black;
+  
+  font-size: 120px;
+  font-weight: 900;
+  border-bottom: solid 20px black;
+}
+
+.cont__clasica--text p{
+  font-size: 90px;
+  font-weight: 600;
+  text-align: end;
+  text-shadow: 8px 8px black;
+
+  margin-top: 100px;
+}
+
+.cont_clasica--boton{
+  margin-top: 80px;
+  display: flex;
+  justify-content: end;
+}
+
+.cont_clasica--boton a{
+  font-size: 50px;
+}
+
+  /*----contenedor iconos*/
+
   .contenedor .icon {
     grid-area: sect4;
     width: 100%;
-    height: 1000px;
+    height: 1800px;
     padding: 5px;
-    margin-top: 5px;
+    margin-top: 100px;
     margin-bottom: 5px;
   }
+
+  /*---------------Seccion iconos-------------*/
+.metodosPagos{
+  display: flex;
+  justify-content: space-around;
+  padding: 80px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  border: solid black 3px;
+  border-radius: 30px;
+  box-shadow: 3px 3px 3px 3px black;
+}
+
+.cuotas img{
+  display: flex;
+  width: 500px;
+  height: 400px;
+}
+
+.cuotas h3{
+  font-size: 80px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(46, 130, 255);
   
+  border-radius: 30px;
+  
+  border: solid 3px rgb(46, 130, 255);
+  color: white;
+  
+  text-align: center;
+}
+
+.envios img{
+  width: 100%;
+  height: 700px;
+}
+
+.envios h3{
+  font-size: 80px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  background-color: rgb(46,130,255);
+  border-radius: 30px;
+  
+  border: solid 3px rgb(46, 130, 255);
+
+  text-align: center;
+}
+  
+/*-----contender redes sociales*/
   .contenedor .redes {
     grid-area: sect5;
     width: 100%;
-    height: 100px;
+    height: 350px;
     padding: 5px;
   
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  /*---------Seccion Redes--------------*/
+
+.redes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contRedes{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: solid 5px rgb(46, 130, 255);
+  background-color: black;
+  border-radius: 20px;
+  width: 100%;
+  height: 330px;
+}
+
+.cont__insta{
+  width: 180px;
+  height: 180px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__insta:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+.cont__what{
+  width: 180px;
+  height: 180px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__what:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+.cont__face{
+  width: 180px;
+  height: 180px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__face:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+
+.redes img{
   
+  width: 140px;
+  height: 140px;
+} 
+  
+/*--- contenedor footer*/
+
   .contenedor footer {
     grid-area: footer;
     width: 100%;
-    height: 100px;
+    height: 200px;
   }
-  .menu li{
-    margin: 10px;
-    font-size: 20px;
+
+  .contenedor__footer{
+    font-size: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
+  
+
+  /*---------  SECCION EDICION LIMITADA ------*/
+
+
+.contenedor__cuentaRegresiva{
+  background-image: url(../assest/fondo-conteo-regresivo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 3px 5px 8px black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.contenedor__cuentaRegresiva h2{
+  font-size: 80px;
+  font-weight: 800;
+  margin-top: -80px;
+  color: rgb(46, 130, 255);
+  text-shadow: 3px 3px  black;
+}
+
+.big-text{
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 1;
+  margin: 0 1.5rem;
+}
+
+.contEle{
+  background-color: white;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.contEle span{
+  font-size: 1.8rem;
+}
+
+
+.cont--text{
+  display: flex;
+}
+
+/*------------------SECCION DE ESTILOS PRODUCTOS--------------------*/
+
+.contenedor__edicionlimitada1{
+  margin-left: 25%;
+  width: 50%;
+  padding: 10px;
+}
+
+.remeraEL1{
+  background-color: white;
+  border-radius: 20px;
+  border: solid rgb(46, 130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.remeraEL1 img{
+  border-radius: 20px;
+  display: flex;
+  width: auto;
+  height: 300px;
+
+}
+
+.remeraEL1__texto{
+  font-size: 30px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: auto;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+.remeraEL1__texto h3{
+  font-size: 50px;
+}
+
+/*------------ SECCION REGISTRO -------------------*/
+
+.errorDatos{
+  font-size: 13px;
+  color: red;
+}
+
+
+.contenedorFormRegistro{
+  font-size: 40px;
+  border-radius: 15px;
+  margin-left: 25%;
+  padding: 15px;
+  border: solid 5px rgb(46, 130, 255);
+  box-shadow: 8px 8px 10px black;
+  background-color: white;
+  height: 80%;
+  width: 50%;
+}
+
+/*--------SECCION INGRESO--------------*/
+
+.contenedorFormIngresar{
+  font-size: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  margin-left: 25%;
+  margin-top: 5%;
+  padding: 15px;
+  border: solid 5px rgb(46, 130, 255);
+  box-shadow: 8px 8px 10px black;
+  background-color: white;
+  height: 50%;
+  width: 50%;
+}
+
+.errorDatos{
+  font-size: 25px;
+}
+
 
 
 }
+
+
+

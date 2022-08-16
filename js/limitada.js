@@ -1,3 +1,39 @@
+// Cuenta regresiva de edicion limitada
+
+const diaEle = document.getElementById("dias")
+const horaEle = document.getElementById("horas")
+const minEle = document.getElementById("minutos")
+const segEle = document.getElementById("segundos")
+
+const proximoEstreno = `1 Jan 2022`
+
+function conteoRegresivo(){
+    const fechaEstreno = new Date(proximoEstreno);
+    const fechaActual = new Date();
+
+    const totalSegundos = (fechaEstreno - fechaActual) / 1000;
+
+    const dias = Math.floor(totalSegundos / 3600 / 24)
+
+    const horas = Math.floor(totalSegundos / 3600) % 24;
+    const minutos = Math.floor(totalSegundos / 60) % 60;
+    const segundos = Math.floor(totalSegundos % 60);
+
+    //console.log(dias, horas, minutos, segundos)
+
+    diaEle.innerHTML = dias;
+    horaEle.innerHTML = horas;
+    minEle.innerHTML = minutos;
+    segEle.innerHTML = segundos;
+    
+}
+
+conteoRegresivo();
+
+setInterval(conteoRegresivo, 1000)
+
+/*------------------------- SECCION ROPA --------------------------*/
+
 /*----------------------------- SECCION ROPA EDICION MODERNA --------------------------------------*/
 
 
@@ -6,62 +42,57 @@
 
 const productos=[
     {
-        id: 0,
-        nombre: "Remera mujer verano",
-        precio: 800,
-        imgSrc: "../assest/remera1-edicionlimitada.jpg"
+        id: 3,
+        nombre: "Remera limi uno",
+        precio: 1100,
+        imgSrc: "../assest/remera-limitada.jpg"
     },
     {
-        id: 1,
-        nombre: "Remera hombre verano",
-        precio: 1000,
-        imgSrc: "../assest/remera2-edicionlimitada.jpg"
+        id: 4,
+        nombre: "Remera limi dos",
+        precio: 850,
+        imgSrc: "../assest/remera-limitada2.jpg"
     },
     {
-        id: 2,
-        nombre: "Remera casual verano",
-        precio: 900,
-        imgSrc: "../assest/remera3-moderno.png"
+        id: 5,
+        nombre: "pantalon limi 1",
+        precio: 1900,
+        imgSrc: "../assest/pantalon1-edicionlimiada.jpg"
     }
 
 ]
 
-
-
-const ropaModerna = document.getElementById("catalogoModerna");
+const ropaLimitada = document.getElementById("catalogoLimi");
 const carrito = document.getElementById("contCarrito");
 const subTotal = document.getElementById("subTotal");
 const totalProductosCarrito = document.getElementById("totalProductos");
 
-
-
 function renderProductos(){
     productos.forEach(producto => {
-        ropaModerna.innerHTML += `
-        <div class="remeraEL1" >
+        ropaLimitada.innerHTML += `
+        <div class="remeraEL1">
                     <img src="${producto.imgSrc}" alt="${producto.nombre}">
                 </div>    
-                <div class="remeraEL1__texto" id="0">  
+                <div class="remeraEL1__texto">  
                     <h3>${producto.nombre}</h3>
-                    <div>
-                        <p>$${producto.precio}</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary addCart" onclick="addCart(${producto.id})">Agregar al carrito</button>
-                    
+                <div>
+                    <p>$${producto.precio}</p>
                 </div>
+                    <button type="submit" class="btn btn-primary addCart" onclick="addCart(${producto.id})">Agregar al carrito</button>
+        
+        </div>
 
                 `
     });
 }
 
+
+
 renderProductos();
 
 //Array carrito
 
-// let cart = []
-
-let cart = JSON.parse(localStorage.getItem("CART"));
-updatecart();
+let cart =[];
 
 //Agregar al carrito
 
@@ -72,6 +103,8 @@ function addCart(id){
     }else{
         const item = productos.find((producto) =>producto.id === id)
 
+
+
     cart.push({
         ...item,
         numeroUnidades: 1,
@@ -81,16 +114,11 @@ function addCart(id){
     updatecart();
 }
 
-
 /*Renderizar carrito*/
 
 function updatecart(){
     renderCartItems();
     renderSubTotal();
-
-    //local storage cart
-
-    localStorage.setItem("CART", JSON.stringify(cart))
 
 }
 
@@ -142,6 +170,8 @@ function renderCartItems(){
     });
 }
 
+
+
 //Borrar del carrito
 
 function borrarItem(id){
@@ -177,8 +207,4 @@ function cambioNumeroUnit(action, id){
 
     updatecart();
 }
-
-localStorage.setItem("list", JSON.stringify(cart));
-
-
 

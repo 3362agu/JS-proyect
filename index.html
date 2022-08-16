@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark tamañoMenu">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assest/premium-logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top">
+                    <img src="assest/premium-logo.png" alt="" width="40" height="34" class="d-inline-block align-text-top logoP">
                     PREMIUM
                 </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,14 +55,13 @@
         <header>
             <div class="descripcion">
                 <div class="card bg-dark text-white">
-                    
+                    <img src="assest/logo-header.jpg" class="card-img" alt="premium">
                     <div class="card-img-overlay">
                         <h1 class="card-title tituloPremium">Premium</h1>
-                        <p class="card-text textoPremium">No seas uno más del promedio, marca la diferencia.</p>
+                        <p class="card-text textoPremium">"No seas uno más del promedio, marca la diferencia."</p>
                     </div>
                 </div>
             </div>
-            
         </header>
 
         <section class="unica">
@@ -108,7 +107,8 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
+            <div>
                 <a href="pages/moderna.html">
                     <div class="d-grid gap-2">
                         <button class="btn btn-primary button__moderna" type="button">Moderna</button>
@@ -121,44 +121,69 @@
 
         <section class="clasica">
             <div class="card bg-dark text-white">
-                <img src="assest/clasica-imgen-fondo.png" class="card-img" alt="premium" style="height: 600px;">
+                <img src="assest/clasica-imgen-fondo.png" class="card-img" alt="premium" >
+                
                 <div class="card-img-overlay cont__clasica--text">
                     <h2 class="card-title">Clasica</h2>
                     <p class="card-text">Porque lo clasico no pasa de moda.</p>
                     <div class="cont_clasica--boton">
                         <a class="btn btn-primary" href="pages/clasica.html" role="button">Clasica</a>
                     </div>
+
+                    
+
                 </div>
                 
+                    
             </div>
+            
         </section>
                 
             <!--2 iconos con forma de pago y envio -->
         <div class="icon">
             <div class="cuotas">
-                <img src="assest/cuotas.png" alt="cuotas fijas" > 
-                <p>12 cuotas fijas</p>
+
+                <h3>Metodos de pago</h3>
+
+                <div class="metodosPagos">
+                    <img src="assest/cuotas.png" alt="cuotas fijas" >
+                    <img src="assest/logo-btc.png.crdownload" alt="bitcoin">
+                    <img src="assest/logo-eth.png" alt="etheriun">
+                </div>
+                
+                
             </div>
             <div class="envios">
-                <img src="assest/envios.png" alt="envios gratis">
-                <p>Envios gratis</p>
+
+                <h3>Envios gratis</h3>
+                <div class="metodoEnvios">
+                    <img src="assest/metodos-de-envio.jpg" alt="envios gratis">
+                </div>
+                
             </div>
+        
         </div>
         
         <div class="redes">
-            <div class="cont__insta">
-                <a href="#"> <img class="insta" src="assest/logo-instagram2.png" alt="instagram"></a>
+            
+            <div class="contRedes">
+
+            
+                <div class="cont__insta">
+                    <a href="#"> <img class="insta" src="assest/logo-instagram2.png" alt="instagram"></a>
+                </div>
+                
+                <div class="cont__what">
+                    <a href="#"> <img class="whats" src="assest/logo-whatsapp.png" alt="whatsapp"></a>
+                </div>
+
+                <div class="cont__face">
+                    <a href="#"><img class="face" src="assest/logo-facebook.png" alt="facebook"></a>
+                </div>
             </div>
             
-            <div class="cont__what">
-                <a href="#"> <img class="whats" src="assest/logo-whatsapp.png" alt="whatsapp"></a>
-            </div>
-
-            <div class="cont__face">
-                <a href="#"><img class="face" src="assest/logo-facebook.png" alt="facebook"></a>
-            </div>
         </div>
-        
+
         <footer>
             <div class="contenedor__footer">
                 <a href="#"> Contacto</a>
@@ -173,6 +198,8 @@
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src="assest/carritox2.png" alt="carrito de compras" class="carrito--img">
         </button>
+
+    </div>    
 
 <!-- Modal -->
     <div class="modal fade contCarrito" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -192,7 +219,8 @@
             </div>
         </div>
     </div>
-    </div>
+    
+
     
 
 
@@ -201,6 +229,8 @@
     
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    
 </body>
 </html>
