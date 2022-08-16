@@ -54,8 +54,6 @@ renderProductos();
 
 //Array carrito
 
-// let cart = []
-
 let cart = JSON.parse(localStorage.getItem("CART"));
 updatecart();
 
