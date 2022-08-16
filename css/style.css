@@ -1,0 +1,647 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: black;
+}
+
+/*---------------------Seccion grilla---------------------------------*/
+.contenedor {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4);
+  grid-template-rows: repeat(8);
+  grid-template-areas: "menu menu menu menu"
+ "header header header header"
+ "sect1 sect1 sect1 sect1"
+ "sect2 sect2 sect2 sect2"
+ "sect3 sect3 sect3 sect3"
+ "sect4 sect4 sect4 sect4"
+ "sect5 sect5 sect5 sect5"
+ "footer footer footer footer ";
+}
+
+.contenedor .menu {
+  grid-area: menu;
+  width: 100%;
+  height: 100px;
+  
+}
+
+.contenedor header {
+  grid-area: header;
+  width: 100%;
+  height: 500px;
+  padding: 5px;
+
+}
+
+.contenedor .clasica {
+  grid-area: sect3;
+  width: 100%;
+  height: 600px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contenedor .moderna {
+  grid-area: sect2;
+  width: 100%;
+  height: 600px;
+  padding: 5px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contenedor .unica {
+  grid-area: sect1;
+  width: 100%;
+  height: 700px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contenedor .icon {
+  grid-area: sect4;
+  width: 100%;
+  height: 1000px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contenedor .redes {
+  grid-area: sect5;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contenedor footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100px;
+}
+
+/*----------------------------Seccion de Menu-------------------*/
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tamañoMenu {
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.logoMenu{
+  font-size: 100px;
+}
+
+/*------------------------Carrito flotante------------------------------*/
+
+.carrito{
+  position: absolute;
+  left: 330px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+
+
+/*----------------------------Seccion header principal---------------------------*/
+
+
+
+.descripcion h1 {
+  color: white;
+  font-family: 'Domine', serif;
+}
+
+.descripcion p {
+  display: flex;
+  color: white;
+  font-family: 'Cinzel', serif;
+}
+
+.tituloPremium {
+  font-size: 80px;
+  font-style: oblique;
+}
+
+.textoPremium {
+  font-size: 35px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 50px;
+}
+
+/*------------------------Seccion edicion limiada pagina principal------------------------*/
+
+.unica__img{
+  background-image: url(../assest/edicion-limitada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+}
+
+.unica__titulo{
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 15px;
+  text-shadow: 4px 4px rgb(255, 255, 255);
+
+  border-bottom: solid 5px rgb(255, 255, 255);
+  
+}
+
+.unica__texto{
+  font-size: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-shadow: 3px 3px rgb(255, 255, 255);
+  
+  text-align: end;
+  padding-left: 100px;
+  padding-right: 20px;
+  
+}
+
+.unica__carousel{
+  border: solid 8px rgb(46, 130, 255);
+  border-radius: 20px;
+  position: relative;
+  top: 60px;
+  left: 80px;
+  width: 80%;
+  height: 200px;
+}
+
+.unica__carousel img{
+  border-radius: 10px;
+  width: 200px;
+  height: 185px;
+}
+
+
+/*-----------Seccion moderna pagina principal------------*/
+
+.tituloModerna{
+  background-color: rgb(46, 130, 255);
+  border-radius: 40px;
+  border: solid 3px rgb(46, 130, 255);
+  height: 70px;
+  color: white;
+}
+
+.tituloModerna h2{
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.contenedorCarousel{
+  width: 100%;
+  height: 470px;
+
+  padding: 10px;
+}
+
+.img__carousel{
+  width: 100px;
+  height: 470px;
+
+}
+
+.button__moderna{
+  margin-top: 5px;
+}
+
+/*---------Seccion ropa clasica pagina principal-------------*/
+
+
+
+.clasica__img{
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 300px;
+  
+}
+
+.cont__clasica--text h2{
+  font-family: sans-serif;
+  font-weight: 600;
+  text-shadow: 4px 4px black;
+  
+  font-size: 80px;
+  border-bottom: solid 7px black;
+}
+
+.cont__clasica--text p{
+  font-size: 50px;
+  font-weight: 600;
+  text-align: end;
+  text-shadow: 2px 2px black;
+
+  margin-top: 50px;
+}
+
+.cont_clasica--boton{
+  display: flex;
+  justify-content: end;
+}
+
+
+
+/*---------------Seccion iconos-------------*/
+
+.cuotas img{
+  width: 100%;
+  height: 380px;
+}
+
+.cuotas p{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(46, 130, 255);
+  
+  border-radius: 30px;
+  
+  border: solid 3px rgb(46, 130, 255);
+  color: white;
+  
+  text-align: center;
+}
+
+.envios img{
+  width: 100%;
+  height: 380px;
+}
+
+.envios p{
+  font-size: 40px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  background-color: rgb(46,130,255);
+  border-radius: 30px;
+  
+  border: solid 3px rgb(46, 130, 255);
+
+  text-align: center;
+}
+
+/*---------Seccion Redes--------------*/
+
+.redes{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.cont__insta{
+  width: 80px;
+  height: 80px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__insta:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+.cont__what{
+  width: 80px;
+  height: 80px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__what:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+.cont__face{
+  width: 80px;
+  height: 80px;
+  background-color: white ;
+  border: solid 3px rgb(46,130, 255);
+  box-shadow: 5px -3px blue;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont__face:hover{
+  transform: translate(10px, -5px);
+  transition: 2s;
+}
+
+
+.redes img{
+
+  width: 60px;
+  height: 60px;
+}
+
+/*------------Seccion footer------------*/
+
+footer{
+  background-color: rgb(46, 130, 255);
+  border: solid 5px rgb(46,130, 255);
+  border-radius: 20px
+}
+
+footer div{
+  font-size: 25px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+
+}
+
+footer div a{
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  
+}
+
+
+
+/*------------ SECCION REGISTRO -------------------*/
+
+.errorDatos{
+  font-size: 13px;
+  color: red;
+}
+
+
+.contenedorFormRegistro{
+  border-radius: 15px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 0 0 2px rgb(46, 130, 255);
+  background-color: white;
+  height: 100%;
+}
+
+/*--------SECCION INGRESO--------------*/
+
+.contenedorFormIngresar{
+  padding: 40px;
+  border-radius: 15px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 0 0 2px rgb(46, 130, 255);
+  background-color: white;
+  height: 80%;
+}
+
+/*--------------- -------------------  SECCION EDICION LIMITADA -------------------------------------------*/
+
+
+.contenedor__cuentaRegresiva{
+  background-image: url(../assest/fondo-conteo-regresivo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+
+.contenedor__cuentaRegresiva h2{
+  font-size: 35px;
+  margin-top: -40px;
+  color: black;
+  text-shadow: 0 0 10px rgb(46, 130, 255);
+}
+
+.big-text{
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0 1.5rem;
+}
+
+.contEle{
+  background-color: white;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 1px;
+  text-align: center;
+}
+
+.contEle span{
+  font-size: 1.5rem;
+}
+
+
+.cont--text{
+  display: flex;
+}
+
+
+
+.contenedor__edicionlimitada1{
+  padding: 10px;
+}
+
+.remeraEL1{
+  background-color: white;
+  border-radius: 20px;
+  border: solid rgb(46, 130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.remeraEL1 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+
+}
+
+.remeraEL1__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+.remeraEL1__texto h3{
+  font-size: 20px;
+}
+
+/*Remera 2*/
+
+.remeraEL2{
+  background-color: white;
+  border-radius:20px;
+  border: solid rgb(46,130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+.remeraEL2 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+  
+
+}
+
+.remeraEL2__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+.remeraEL2__texto h3{
+  font-size: 20px;
+}
+
+.btnAgregar{
+  color: white;
+  background-color: rgb(46, 130, 255);
+}
+
+/*pantalon1*/
+
+.contenedor__edicionlimitada2{
+  padding: 10px;
+}
+
+.pantalonEL1{
+  background-color: white;
+  border-radius:10px;
+  border: solid rgb(46,130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.pantalonEL1 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+  height: 190px;
+
+}
+
+.pantalonEL1__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+/*pantalon2*/
+
+.pantalonEL2{
+  background-color: white;
+  border-radius:20px;
+  border: solid rgb(46,130, 255);
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+.pantalonEL2 img{
+  border-radius: 20px;
+  display: flex;
+  width: 190px;
+  
+
+}
+
+.pantalonEL2__texto{
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-flow: column;
+  width: 250px;
+
+  padding: 15px;
+
+  margin-left: 130px;
+  margin-top: -160px;
+  height: 140px;
+}
+
+
