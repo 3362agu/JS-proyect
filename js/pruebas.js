@@ -1,62 +1,14 @@
-/*----------------------------- SECCION ROPA EDICION MODERNA --------------------------------------*/
+/*probando cosas para el proyecto*/
+
+// function upPage(){
+
+//     window.scroll(0,0)
+
+//     console.log("subir pagina")
+// }
 
 
-
-//Array productos
-
-const productos=[
-    {
-        id: 0,
-        nombre: "Remera mujer verano",
-        precio: 800,
-        imgSrc: "../assest/remera1-edicionlimitada.jpg"
-    },
-    {
-        id: 1,
-        nombre: "Remera hombre verano",
-        precio: 1000,
-        imgSrc: "../assest/remera2-edicionlimitada.jpg"
-    },
-    {
-        id: 2,
-        nombre: "Remera casual verano",
-        precio: 900,
-        imgSrc: "../assest/remera3-moderno.png"
-    }
-
-]
-
-
-
-const ropaModerna = document.getElementById("catalogoModerna");
-// const carrito = document.getElementById("contCarrito");
-// const subTotal = document.getElementById("subTotal");
-// const totalProductosCarrito = document.getElementById("totalProductos");
-
-
-
-function renderProductos(){
-    productos.forEach(producto => {
-        ropaModerna.innerHTML += `
-        <div class="remeraEL1" >
-                    <img src="${producto.imgSrc}" alt="${producto.nombre}">
-                </div>    
-                <div class="remeraEL1__texto" id="0">  
-                    <h3>${producto.nombre}</h3>
-                    <div>
-                        <p>$${producto.precio}</p>
-                    </div>
-                    <button type="submit" class="btn btn-primary addCart" onclick="addCart(${producto.id})">Agregar al carrito</button>
-                    
-                </div>
-
-                `
-    });
-}
-
-renderProductos();
-
-/*VALORACION*/
+/*valoracion de pagina*/
 
 const valDatos = [
     {   
@@ -175,7 +127,7 @@ submitBtn.addEventListener("click", (e)=>{
                         <div class="modal-body">
                                 <h3>Que lastima</h3></br>
                                 
-                                <img src="../assest/carita-triste.png" alt="triste" class="carita">
+                                <img src="assest/carita-triste.png" alt="triste" class="carita">
 
                         </div>
                     </div>
@@ -193,7 +145,7 @@ submitBtn.addEventListener("click", (e)=>{
                         <div class="modal-body">
                                 <h3>Mejoraré la proxima</h3></br>
                                 
-                                <img src="../assest/carita-pensando.png" alt="triste" class="carita">
+                                <img src="assest/carita-pensando.png" alt="triste" class="carita">
                             
                         </div>
                     </div>
@@ -211,7 +163,7 @@ submitBtn.addEventListener("click", (e)=>{
                         <div class="modal-body">
                                 <h3>Muchas gracias</h3></br>
                                 
-                                <img src="../assest/carita-feliz.png" alt="triste" class="carita">
+                                <img src="assest/carita-feliz.png" alt="triste" class="carita">
                                 
                         </div>
                     </div>
@@ -233,7 +185,5 @@ submitBtn.addEventListener("click", (e)=>{
 
 
 console.log(resultado)
-
-
 
 
