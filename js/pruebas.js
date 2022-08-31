@@ -1,13 +1,3 @@
-/*probando cosas para el proyecto*/
-
-// function upPage(){
-
-//     window.scroll(0,0)
-
-//     console.log("subir pagina")
-// }
-
-
 /*valoracion de pagina*/
 
 const valDatos = [
@@ -205,10 +195,6 @@ function renderBulba(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`${data.name}`)
-        // console.log(data.sprites.front_default)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         bulbasaur.push(
             {nombre: `${data.name}`,
@@ -255,9 +241,6 @@ function renderCharm(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`nombre: ${data.name}`)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         charmander.push({nombre: `${data.name}`,
         hp:`${data.stats[0].base_stat}`,
@@ -302,9 +285,6 @@ function renderSqui(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`nombre: ${data.name}`)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         squirtle.push({nombre: `${data.name}`,
         hp:`${data.stats[0].base_stat}`,

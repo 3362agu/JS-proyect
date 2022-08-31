@@ -81,18 +81,8 @@ $(()=>{
 
 // /*metodo de pago*/
 
-// const visaLogo = document.getElementById("visaLogo")
-// const masterLogo = document.getElementById("masterLogo")
-// const renderContImg = document.getElementById("renderContImg")
 
-
-// const renderPagos = document.getElementById("renderDataPagos")
-
-// const btnCCard = document.getElementById("btnCCard")
-// const btnBtc = document.getElementById("btnBtc")
-// const btnEth = document.getElementById("btnEth")
 const form = document.getElementById("formCard")
-// const btnSub = document.getElementById("btnSub")
 
 const valNroCard = document.getElementById("valNroCard")
 const valNomCard = document.getElementById("valNomCard")

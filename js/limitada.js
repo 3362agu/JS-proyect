@@ -63,9 +63,6 @@ const productos=[
 ]
 
 const ropaLimitada = document.getElementById("catalogoLimi");
-// const carrito = document.getElementById("contCarrito");
-// const subTotal = document.getElementById("subTotal");
-// const totalProductosCarrito = document.getElementById("totalProductos");
 
 function renderProductos(){
     productos.forEach(producto => {
@@ -268,124 +265,6 @@ submitBtn.addEventListener("click", (e)=>{
 
 console.log(resultado)
 
-//Array carrito
-
-// let cart =[];
-
-//Agregar al carrito
-
-// function addCart(id){
-
-//     if(cart.some((item)=> item.id ===id)){
-//         cambioNumeroUnit("plus", id)
-//     }else{
-//         const item = productos.find((producto) =>producto.id === id)
-
-
-
-//     cart.push({
-//         ...item,
-//         numeroUnidades: 1,
-//     })
-//     }
-
-//     updatecart();
-// }
-
-// /*Renderizar carrito*/
-
-// function updatecart(){
-//     renderCartItems();
-//     renderSubTotal();
-
-// }
-
-//Calcular y renderizar el precio de productos
-
-// function renderSubTotal(){
-//     let precioTotal = 0, totalItems = 0;
-
-//     cart.forEach(item => {
-//         precioTotal += item.precio * item.numeroUnidades;
-//         totalItems += item.numeroUnidades;
-//     });
-
-//     subTotal.innerHTML = `
-//             Subtotal (${totalItems} items): $${precioTotal}
-//     `
-
-//     if(totalItems >= 0){
-//         totalProductosCarrito.innerHTML = totalItems
-//     }else{
-        
-//     }
-// }
-
-// function renderCartItems(){
-//     carrito.innerHTML = "";
-    
-//     cart.forEach(item => {
-//         carrito.innerHTML += `
-//         <div class="card mb-3" style="max-width: 540px;">
-//         <div class="row g-0">
-//             <button type="button" class="btn btn-warning" onclick="borrarItem(${item.id})">Borrar</button>
-//             <div class="col-md-4">
-//             <img src="${item.imgSrc}" class="img-fluid rounded-start" alt="...">
-//             </div>
-//             <div class="col-md-8">
-//             <div class="card-body">
-//                 <h5 class="card-title">${item.nombre}</h5>
-//                 <div><button type="button" class="btn btn-success" onclick="cambioNumeroUnit('plus', ${item.id})">+</button></div>
-//                 <div>${item.numeroUnidades}</div>
-//                 <div><button type="button" class="btn btn-danger" onclick="cambioNumeroUnit('minus', ${item.id})">-</button></div>
-//             </div>
-            
-//             </div>
-//         </div>
-//         </div>
-            
-//         `
-//     });
-// }
-
-
-
-// //Borrar del carrito
-
-// function borrarItem(id){
-
-//     cart = cart.filter((item)=> item.id !== id)
-
-//     updatecart();
-
-// }
-
-// //Cambiar numero de unidades
-
-// function cambioNumeroUnit(action, id){
-//     cart = cart.map((item)=>{
-
-//         let numeroUnidades = item.numeroUnidades;
-
-//         if(item.id ===id){
-//             if(action === 'plus'){
-//                 numeroUnidades++
-//             }
-//             else if(action === 'minus' && numeroUnidades > 1){
-//                 numeroUnidades--
-//             }
-//         }
-
-//         return{
-//             ...item,
-//             numeroUnidades,
-//         }
-
-//     });
-
-//     updatecart();
-// }
-
 /*Seleccion de pokemon*/
 
 
@@ -406,10 +285,6 @@ function renderBulba(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`${data.name}`)
-        // console.log(data.sprites.front_default)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         bulbasaur.push(
             {nombre: `${data.name}`,
@@ -456,9 +331,6 @@ function renderCharm(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`nombre: ${data.name}`)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         charmander.push({nombre: `${data.name}`,
         hp:`${data.stats[0].base_stat}`,
@@ -503,9 +375,6 @@ function renderSqui(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`nombre: ${data.name}`)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         squirtle.push({nombre: `${data.name}`,
         hp:`${data.stats[0].base_stat}`,

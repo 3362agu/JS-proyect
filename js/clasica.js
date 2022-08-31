@@ -255,119 +255,6 @@ submitBtn.addEventListener("click", (e)=>{
 console.log(resultado)
 
 
-// $(()=>{
-
-//     const URL_LOCAL = "../products/productos.json"
-
-//     $.ajax({
-//         dataType: "json",
-//         url: URL_LOCAL,
-//     }).done(function(response, status){
-//         if( status === `success`){
-//             response.ropaClasica.forEach(producto => {
-//                 $("#clasica").append(`
-        
-//                     <div class="remeraEL1">
-                        
-//                             <img src="${producto.imgSrc}" alt="${producto.nombre}" class="imgRopa">
-//                                 <div>
-//                                     <img src="../assest/oferta.jpg" alt="" class="imgRopa2"></img>
-//                                 </div>
-                            
-//                     </div>
-//                     <div class="remeraEL1__texto">  
-//                         <h3>${producto.nombre}</h3>
-//                         <div>
-//                             <p>$${producto.precio}</p>
-//                         </div>
-                        
-//                             <button type="submit" class="btn btn-primary addCart">Agregar al carrito</button>
-                        
-//                     </div>
-        
-//         `)
-//             });
-
-            
-//         }
-
-
-//         /*---ALERTA CUANDO AGREGAS UN PRODUCTO AL CARRITO*/
-
-//         $(".addCart").click(function(){
-//             $(this).css("background-color", "green")
-//                 $(".contenedor__edicionlimitada1").prepend(`
-//                 <div class="alert alert-success" role="alert" style="position: absolute">
-//                     Agregaste un producto al carrito!
-//                 </div>`)
-//                 $(".alert-success").fadeOut(2500)
-    
-    
-//         })
-    
-//         /*---ANIMACION BOTON */
-
-//         $(".addCart").mouseenter(function(e){
-//             $(e.target).css({
-//                 backgroundColor: "green"
-//             }).delay
-//         })
-    
-//         $(".addCart").mouseleave(function(e){
-//             $(e.target).css({
-//                 backgroundColor: "blue"
-//             })
-//         })
-
-//         /*---ANIMACION OFERTA ROPA CLASICA*/
-        
-//         $(".imgRopa2").hide()
-
-        
-        
-        
-
-        
-
-//         // let cartItemCont = 0;
-//         $(".addCart").click( (e) =>{
-            
-//             const img = $(e.target).parent(".remeraEL1").children("img").attr("src")
-//             const title = $(e.target).parent(".remeraEL1__texto").children("h3").text()
-//             const price = $(e.target).parent(".remeraEL1__texto").children("div").children().text()
-            
-
-//             console.log(img)
-//             console.log(title)
-//             console.log(price)
-
-//             let cartItems = `
-//                 <div class="card mb-3" style="max-width: 540px;">
-//                 <div class="row g-0">
-                    
-//                     <div class="col-md-4">
-//                     <img src="${img}" class="img-fluid rounded-start" alt="...">
-//                     </div>
-//                     <div class="col-md-8">
-//                     <div class="card-body">
-//                         <h5 class="card-title">${title}</h5>
-//                         <h4>${price}</h4>
-//                     </div>
-                    
-//                     </div>
-//                 </div>
-//                 </div>
-//             `
-            
-//             $("#contCarrito").append(cartItems)
-//         })
-
-
-//     })
-
-
-
-// })
 
 /*Seleccion de pokemon*/
 
@@ -389,10 +276,6 @@ function renderBulba(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`${data.name}`)
-        // console.log(data.sprites.front_default)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         bulbasaur.push(
             {nombre: `${data.name}`,
@@ -439,9 +322,6 @@ function renderCharm(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`nombre: ${data.name}`)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         charmander.push({nombre: `${data.name}`,
         hp:`${data.stats[0].base_stat}`,
@@ -486,9 +366,6 @@ function renderSqui(){
     .then((res)=>res.json())
     .then((data)=>{
         console.log(`nombre: ${data.name}`)
-        // console.log(`hp: ${data.stats[0].base_stat}`)
-        // console.log(`ataque: ${data.stats[1].base_stat}`)
-        // console.log(`defensa: ${data.stats[2].base_stat}`)
 
         squirtle.push({nombre: `${data.name}`,
         hp:`${data.stats[0].base_stat}`,
